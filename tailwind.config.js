@@ -1,10 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        // 26 columns fractional grid
+        '26': 'repeat(26, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        '9': 'repeat(9, minmax(0, 1fr))',
+      },
+    },
   },
-  plugins: [],
 }
